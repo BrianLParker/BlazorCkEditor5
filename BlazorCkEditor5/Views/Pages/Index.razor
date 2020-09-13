@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+<EditForm Model="fruit">
+
+<CkEditor5  @bind-Value="fruit.Description"/>
+</EditForm  >
+
+@((MarkupString)fruit.Description)
+
+@code {
+    BlazorCkEditor5.Models.Fruit fruit = new Models.Fruit();
+}
